@@ -8,7 +8,6 @@ export default function App() {
           <h1>Learn Web development</h1>
         </header>
       </section>
-
       <Main />
     </>
   );
