@@ -42,17 +42,35 @@ const languages = [
 ];
 
 export default function Main() {
+  const [clickedBtn, setClickedBtn] = useState(1);
+
   return (
     <main className="m-4 container">
-      {languages.map((items) => (
-        <Button title={items.title} key={items.id} />
+      {languages.map((item) => (
+        <button
+          className={
+            "btn m-2 " +
+            (item.id == clickedBtn ? " btn-warning " : " btn-primary ")
+          }
+          id={item.id}
+          title={item.title}
+          key={item.id}
+          onClick={() => {
+            setClickedBtn(item.id);
+            console.log(item.id, clickedBtn);
+          }}
+        >
+          {item.title}
+        </button>
       ))}
-      {languages.map((items) => (
+
+      {languages.map((item) => (
         <Card
-          title={items.title}
-          key={items.id}
-          body={items.description}
-          isClicked={clickedItem === true}
+          id={item.id}
+          title={item.title}
+          key={item.id}
+          body={item.description}
+          clickedBtn={clickedBtn}
         />
       ))}
     </main>

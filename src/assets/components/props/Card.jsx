@@ -1,5 +1,5 @@
-export default function Card({ title, body, isClicked }) {
-  if (isClicked === true) {
+export default function Card({ title, body, clickedBtn, id }) {
+  if (clickedBtn === id - 1) {
     return (
       <div className="card">
         <div className="card-title">

@@ -1,6 +1,13 @@
-export default function Button({ title }) {
+export default function Button({ id, title, clickedBtn }) {
+  console.log(clickedBtn);
+
   return (
-    <button type="button" className="btn btn-primary m-2">
+    <button
+      type="button"
+      className={
+        "btn m-2 " + (id == clickedBtn ? " btn-success " : " btn-primary ")
+      }
+    >
       {title}
     </button>
   );
