@@ -57,7 +57,6 @@ export default function Main() {
           key={item.id}
           onClick={() => {
             setClickedBtn(item.id);
-            console.log(item.id, clickedBtn);
           }}
         >
           {item.title}
