@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Button from "./props/Button";
 import Card from "./props/Card";
 
@@ -51,7 +52,7 @@ export default function Main() {
           title={items.title}
           key={items.id}
           body={items.description}
-          isClicked={true}
+          isClicked={clickedItem === true}
         />
       ))}
     </main>
