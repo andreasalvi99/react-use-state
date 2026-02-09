@@ -1,4 +1,5 @@
 import Button from "./props/Button";
+import Card from "./props/Card";
 
 const languages = [
   {
@@ -43,6 +44,7 @@ export default function Main() {
   return (
     <main className="m-4">
       <Button items={languages} />
+      <Card items={languages} />
     </main>
   );
 }
