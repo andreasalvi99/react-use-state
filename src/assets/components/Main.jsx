@@ -42,9 +42,13 @@ const languages = [
 
 export default function Main() {
   return (
-    <main className="m-4">
-      <Button items={languages} />
-      <Card items={languages} />
+    <main className="m-4 container">
+      {languages.map((items) => (
+        <Button title={items.title} key={items.id} />
+      ))}
+      {languages.map((items) => (
+        <Card title={items.title} key={items.id} body={items.description} />
+      ))}
     </main>
   );
 }
