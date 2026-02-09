@@ -1,7 +1,7 @@
 export default function Card({ title, body, clickedBtn, id }) {
   if (clickedBtn === id) {
     return (
-      <div className="card">
+      <div className="card mt-3">
         <div className="card-title">
           <h2>{title}</h2>
         </div>
