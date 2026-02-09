@@ -47,7 +47,12 @@ export default function Main() {
         <Button title={items.title} key={items.id} />
       ))}
       {languages.map((items) => (
-        <Card title={items.title} key={items.id} body={items.description} />
+        <Card
+          title={items.title}
+          key={items.id}
+          body={items.description}
+          isClicked={true}
+        />
       ))}
     </main>
   );
